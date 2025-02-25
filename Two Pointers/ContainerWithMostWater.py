@@ -15,3 +15,7 @@
 # Output: 4
 
 from typing import List
+
+class Solution:
+    def maxArea(self, heights: List[int]) -> int:
+        pass
