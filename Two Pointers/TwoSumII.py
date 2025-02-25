@@ -19,3 +19,18 @@
 # The sum of 1 and 2 is 3. Since we are assuming a 1-indexed array, index1 = 1, index2 = 2. We return [1, 2].
 
 from typing import List
+
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        leftDigit = 0
+        rightDigit = len(numbers) - 1
+
+        while leftDigit < rightDigit:
+            if (numbers[leftDigit] + numbers[rightDigit]) == target:
+                return [leftDigit + 1, rightDigit + 1]
+            elif (numbers[leftDigit] + numbers[rightDigit]) < target:
+                leftDigit += 1
+            elif (numbers[leftDigit] + numbers[rightDigit]) > target:
+                rightDigit -= 1
+        
+        
