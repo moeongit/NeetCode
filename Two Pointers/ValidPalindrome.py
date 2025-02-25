@@ -18,3 +18,8 @@
 # Input: s = "tab a cat"
 
 # Output: false
+
+from typing import List
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
