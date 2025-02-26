@@ -27,3 +27,8 @@ class Solution:
             width = right - left
             area = curHeight * width
             result = max(result, area)
+
+            if heights[left] <= heights[right]:
+                left += 1
+            else:
+                right -= 1
