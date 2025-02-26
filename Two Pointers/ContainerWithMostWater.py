@@ -18,4 +18,12 @@ from typing import List
 
 class Solution:
     def maxArea(self, heights: List[int]) -> int:
-        pass
+        left = 0
+        right = len(heights) - 1
+        result = 0
+
+        while left < right:
+            curHeight = min(heights[left], heights[right])
+            width = right - left
+            area = curHeight * width
+            result = max(result, area)
