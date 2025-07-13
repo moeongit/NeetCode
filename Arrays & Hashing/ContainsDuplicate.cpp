@@ -7,7 +7,7 @@ public:
             if (hashSet.count(num)) {
                 return true;
             }
-            hashSet.add(num);
+            hashSet.insert(num);
         }
         return false;
     }
