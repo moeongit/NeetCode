@@ -40,3 +40,4 @@ class Solution:
                 return [hashMap[complement], i]
 
             hashMap[nums[i]] = i
+
