@@ -14,6 +14,7 @@
 #     'a', 'e', 'i', 'o', 'u', and their uppercases are vowels.
 #     A consonant is an English letter that is not a vowel.
 
+from typing import List
 
 class Solution:
     def isValid(self, word: str) -> bool:

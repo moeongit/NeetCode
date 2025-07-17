@@ -20,17 +20,13 @@ from typing import List
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        hash1 = {}
-        hash2 = {}
+        if len(s) != len(t):
+            return False
 
-        for i in s:
-            if i not in hash1:
-                hash1[i] = 1
-            hash1[i] += 1
-        
-        for i in t:
-            if i not in hash2:
-                hash2[i] = 1
-            hash2[i] += 1
-        
-        return hash1 == hash2
+        sCount = {}
+        tCount = {}
+
+        for i in range(len(s)):
+            sCount[s[i]] = 1 + sCount.get(s[i], 0)
+            tCount[s[i]] = 1 + tCount.get(t[i], 0)
+        return sCount == tCount
