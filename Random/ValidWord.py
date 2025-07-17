@@ -27,10 +27,9 @@ class Solution:
         if char.isalpha():
             if char.lower() in "aeiou":
                 hasvowel = True
-            
+
             else:
                 hascons = True
-        
         elif not char.isdgigit():
             return False
     
