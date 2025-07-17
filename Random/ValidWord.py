@@ -15,3 +15,23 @@
 #     A consonant is an English letter that is not a vowel.
 
 
+class Solution:
+    def isValid(self, word: str) -> bool:
+        if len(word) < 3:
+            return False
+    
+    hasvowel = False
+    hascons = False
+
+    for char in word:
+        if char.isalpha():
+            if char.lower() in "aeiou":
+                hasvowel = True
+            
+            else:
+                hascons = True
+        
+        elif not char.isdgigit():
+            return False
+    
+    return hascons and hasvowel
