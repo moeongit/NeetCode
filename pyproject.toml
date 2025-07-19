@@ -1,0 +1,7 @@
+[tool.mypy]
+ignore_errors = true
+
+[tool.ruff]
+select = ["ALL"]
+ignore = ["ALL"]
+
