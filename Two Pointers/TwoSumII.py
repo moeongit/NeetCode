@@ -26,11 +26,9 @@ class Solution:
         rightDigit = len(numbers) - 1
 
         while leftDigit < rightDigit:
-            if (numbers[leftDigit] + numbers[rightDigit]) == target:
-                return [leftDigit + 1, rightDigit + 1]
-            elif (numbers[leftDigit] + numbers[rightDigit]) < target:
+            if (numbers[leftDigit] + numbers[rightDigit]) < target:
                 leftDigit += 1
             elif (numbers[leftDigit] + numbers[rightDigit]) > target:
                 rightDigit -= 1
-        
-        
+            else:
+                return [leftDigit + 1, rightDigit + 1]
